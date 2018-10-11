@@ -1,0 +1,122 @@
+* {
+     margin: 0;
+    padding: 0;
+}
+
+.Letters-name{
+    width: 500px;
+}
+body {
+    background-color: #eee;
+    font-family: arial;
+}
+.wrapper {
+    margin: 0 auto 0 100px;
+    width: 1000px;
+}
+
+head{
+    blackground-color: white;
+}
+title{
+    color: white;
+    font-size: 48px;
+}
+
+header{
+    background-color: black;
+    color: white;
+}
+
+p b {
+    margin: 0px auto 0px 500px;
+
+    font-family: 18thCentury ;
+    color:white;
+    font-size: 50px;
+}
+.container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div .paslaugumeniu ul li{
+    text-decoration: none;
+    font-size: 10px;
+    font-family: "Times New Roman";
+    color: black;
+    line-height: 100px;
+    display: block;
+    padding: 0 20px;
+    float: left;
+}
+ .ukininku ul li{
+    font-size: 10px;
+    line-height: 20px;
+}
+ .apie-h2{
+     color: Black;
+     font-size: 32px;
+     padding: 10px 10px 10px 100px;
+ }
+ .apie-h2:hover{
+     Color:coral;
+ }
+.container1 p{
+    text-decoration: #333333;
+    font-size:20px;
+    line-height: 16px;
+    display: block;
+    padding: 10px 10px 10px 100px;
+    float: left;
+}
+.container1 p:hover {
+    Color: ThreeDDarkShadow;
+}
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.main-h2{
+    padding: 10px 10px 10px 100px;
+    font-size: 32px;
+}
+.main-column p{
+    text-decoration: #333333;
+    font-size:20px;
+    line-height: 16px;
+    display: block;
+    padding: 10px 10px 10px 100px;
+    float: left;
+}
+
+.verslo-h2{
+    font-size: 30px;
+    color: Black;
+    padding:10px;
+    text-align: center;
+}
+.youth-h2{
+    font-size: 30px;
+    color: Black;
+}
+.own-h2{
+    font-size: 30px;
+    color: Black;
+}
+footer {
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkgrey;
+    color: white;
+    text-align: center;
+}
+

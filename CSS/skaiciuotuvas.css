@@ -1,0 +1,436 @@
+body {
+    background-color: #ddd;
+    margin: 0;
+}
+
+{ .budget-calc--container select}
+
+   .budget-calc--container ul {
+       list-style: none;
+   }
+
+.budget-calc--report:after {
+    background: linear-gradient(160deg, #ffffff 16px, transparent 0), linear-gradient(160deg, #ffffff 16px, transparent 0);
+    background-position: left-top;
+    background-repeat: repeat-x;
+    background-size: 32px 32px;
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
+    z-index: -1;
+}
+
+.budget-calc--info-view {
+    padding-top: 250px;
+    color: #aaa;
+}
+
+.budget-calc--container {
+    background-color: #fff;
+    text-align: center;
+    font-size: 16px;
+    border: 1px #aaa solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px 1px #999;
+}
+
+.budget-calc--container,
+.budget-calc--container * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway';
+    box-sizing: border-box;
+}
+
+.budget-calc--main-title {
+    padding: 15px;
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    text-decoration: uppercase;
+    color: #aaa;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.budget-calc--input,
+.budget-calc--action,
+.budget-calc--reset,
+.budget-calc--select {
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+.budget-calc--select {
+    color: #777;
+}
+
+.budget-calc--action {
+    background-color: green;
+    color: #fff;
+    font-weight: 700;
+    padding: 25px 30px;
+    cursor: pointer;
+    outline: none;
+    opacity: .7;
+    transition: opacity ease 90ms;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+}
+
+.budget-calc--action:hover,
+.budget-calc--reset:hover {
+    opacity: 0.9;
+}
+
+.budget-calc--action:active,
+.budget-calc--reset:active {
+    opacity: 1;
+    box-shadow: inset 2px -2px 10px rgba(0, 0, 0, 0.3);
+}
+.budget-calc--input[data-salary] {
+    color: green;
+}
+
+.budget-calc--input,
+.budget-calc--select {
+    outline: none;
+    border-bottom: 2px #aaa solid;
+}
+
+.budget-calc--info-view .budget-calc--input {
+    width: 300px;
+    margin: 15px 0;
+}
+
+.budget-calc--input,
+.budget-calc--select {
+    outline: none;
+    border-radius: 0;
+    border-bottom: 2px #aaa solid;
+}
+
+.budg-calc--expense-interval {
+    font-size: 12px;
+    font-style: italic;
+    margin: 5px;
+    padding: 9px;
+    background-color: #e1ae3f;
+    color: #fff;
+    border-radius: 5px;
+}
+.budg-calc--expense-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    color: #aaa;
+    padding: 9px;
+    border: 1px #ccc solid;
+    border-top: none;
+    border-right: none;
+    margin-right:1px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+.budg-calc--expense-delete:active {
+    box-shadow: inset 1px -1px 1px #aaa;
+    outline: none;
+}
+.budget-calc--income-item,
+.budget-calc--expense-item {
+    position: relative;
+}
+
+.budget-calc--expense-title,
+.budget-calc--income-title {
+    padding: 15px;
+    font-size: 2em;
+    text-decoration: uppercase;
+    color: #777;
+}
+
+/* phones tablets */
+
+@media all and (max-width: 950px){
+
+
+    html body .budget-calc--container {
+        width: 100%;
+        padding: 1rem .5rem 1rem 1rem; // Blended with scrollbar
+    margin: 0 auto;
+        min-width: 400px;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        overflow-y: scroll;
+        background-color: #efefef;
+
+    }
+
+    .budget-calc--info-view {
+        background-color: #fff;
+        padding: 80px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px #aaa;
+    // border-left: 2px #ccc solid;
+    // border-top: 2px #ccc solid;
+        margin: auto;
+    }
+
+    .budget-calc--info-view .budget-calc--input {
+        width: 100%;
+    }
+
+    .budget-calc--input,
+    .budget-calc--action,
+    .budget-calc--reset,
+    .budget-calc--select {
+        padding: 20px;
+        text-indent: 5px;
+        margin: 5px;
+        outline: none;
+        cursor: pointer;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .budget-calc--add-expenses-view {
+        margin-top: 35px;
+    }
+
+    .budget-calc--main-title {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .budget-calc--action {
+        margin-top: 50px;
+        padding: 25px;
+        border-radius: 4px;
+    }
+
+    .budget-calc--add-expenses-view .budget-calc--action,
+    .budget-calc--add-expenses-view .budget-calc--reset {
+        position: fixed;
+        width: 50%;
+        height: 100px;
+        top: 0;
+        margin: 0;
+        vertical-align: top;
+        border-radius: 0;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .budget-calc--add-expenses-view .budget-calc--action {
+        right: 0;
+        z-index: 1;
+    }
+    .budget-calc--add-expenses-view .budget-calc--reset {
+        left: 0;
+        z-index: 2;
+        color: #fff;
+        background-color: #333;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    .budget-calc--expenses-list-view,
+    .budget-calc--income-list-view {
+        display: block;
+        vertical-align: top;
+    }
+
+    .budget-calc--income-item,
+    .budget-calc--expense-item {
+        padding: 35px;
+        border: 1px #aaa solid;
+        margin: 10px;
+        border-radius: 5px;
+        display: inline-block;
+        width: auto;
+    }
+
+    .budget-calc--expense-item {
+        background: #fff;
+        color: #aaa;
+    }
+
+    .budget-calc--income-item {
+        background: #aaa;
+        color: #fff;
+    }
+
+    .budget-calc--general-info {
+        margin-top: 50px;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        background-color: #aaa;
+        color: #fff;
+        width: 100%;
+        padding: 20px;
+        box-shadow: inset 1px -2px 1px #aaa;
+    }
+
+
+}
+
+/* tablets and desktop devices */
+@media all and (min-width: 950px){
+
+    .budget-calc--container {
+        margin: 60px auto;
+        width: 960px;
+        position: relative;
+        padding: 25px;
+    }
+
+    .budget-calc--info-view {
+        padding: 20px 20px 70px 20px;
+    }
+
+    .budget-calc--select {
+        min-width: 120px;
+    }
+
+    .budget-calc--input,
+    .budget-calc--action,
+    .budget-calc--reset,
+    .budget-calc--select {
+        padding: 7px;
+        text-indent: 5px;
+        margin: 5px;
+        outline: none;
+        cursor: pointer;
+        font-size: 18px;
+
+    }
+
+    .budget-calc--input,
+    .budget-calc--select {
+        color: #777;
+    }
+
+    .budget-calc--input {
+        margin-bottom: 35px;
+    }
+
+    .budget-calc--expenses-list-view,
+    .budget-calc--income-list-view {
+        padding: 50px;
+        display: inline-block;
+        vertical-align: top;
+        width: 48%;
+    }
+
+    .budget-calc--expense-title,
+    .budget-calc--income-title {
+        border: 1px #aaa solid;
+        margin: 10px;
+        display: inline-block;
+
+        border-radius: 5px;
+        font-size: 2em;
+        margin: auto;
+        margin-bottom: 25px;
+        margin-left: 12px;
+        text-decoration: uppercase;
+        background-color: #999;
+        color: #fff;
+    }
+
+    .budget-calc--income-item,
+    .budget-calc--expense-item {
+        display: block;
+        width: 100%;
+        padding: 35px 45px;
+        border: 1px #aaa solid;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    .budget-calc--expense-item {
+        background: #fff;
+        color: #aaa;
+        display: block;
+
+    }
+
+    .budget-calc--income-item {
+        background: #aaa;
+        color: #fff;
+    }
+
+    .budget-calc--action {
+        position: absolute;
+        border-bottom-left-radius: 5px;
+        padding: 15px 20px;
+    }
+
+
+
+    .budget-calc--reset {
+        background-color: #000;
+        color: #fff;
+        font-weight: 700;
+        padding: 15px 20px;
+        position: absolute;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+    }
+
+    .budget-calc--info-view .budget-calc--action {
+        bottom: -6px;
+        right: -6px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 0;
+
+    }
+
+    .budget-calc--add-expenses-view {
+        text-align: left;
+        padding-left: 124px;
+        margin-top: -24px;
+    }
+
+    .budget-calc--add-expenses-view .budget-calc--action {
+        top: -6px;
+        right: -6px;
+        border-top-right-radius: 5px;
+    }
+
+    .budget-calc--add-expenses-view  .budget-calc--reset {
+        top: -6px;
+        left: -6px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+.index-header{
+    font-size: 30px;
+    text-align: left;
+    background:transparent;
+    border-color: transparent;
+    color: darkgrey;
+}
+footer {
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkgrey;
+    color: white;
+    text-align: center;
+}
